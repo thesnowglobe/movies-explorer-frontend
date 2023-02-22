@@ -15,6 +15,11 @@
   width: 100%;
   border-radius: 8px;
   border: 1.5px solid rgba(170, 170, 170, 0.2);
+  margin: 0;
+}
+
+.search-form__content:focus-within {
+  border: 1.5px solid #4285F4;
 }
 
 .search-form__input {
