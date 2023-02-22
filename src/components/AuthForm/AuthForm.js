@@ -22,7 +22,7 @@ const AuthForm = (props) => {
         <Error
           className="auth-form__error"
           errorMessage=""
-          id={`${formName}-error`}
+          id={`submit-${formName}-error`}
         />
         <button className="auth-form__btn">
           {buttonText}
