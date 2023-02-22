@@ -12,7 +12,7 @@ const Portfolio = () => {
       <ul className="portfolio__links">
         {portfolio.map((item) => (
           <li className="portfolio__link" key={item.id}>
-          <a className="portfolio__item" href={item.link}>
+          <a className="portfolio__item" href={item.link} target="_blank" rel="noreferrer">
             {item.name}
             <img className="portfolio__icon" src={arrow} alt="arrow" />
           </a>
