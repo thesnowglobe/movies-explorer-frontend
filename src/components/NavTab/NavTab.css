@@ -20,6 +20,10 @@
   border-radius: 10px;
 }
 
+.navtab__link:hover {
+  opacity: 80%;
+}
+
 
 @media screen and (max-width: 364px) {
   .navtab {
@@ -30,7 +34,8 @@
   .navtab__link {
     font-size: 10px;
     line-height: 16px;
-    width: 51px;
-    height: 16px;
+    width: 82px;
+    height: 26px;
+    border-radius: 6px;
   }
 }
