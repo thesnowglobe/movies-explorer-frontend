@@ -12,7 +12,7 @@
   z-index: 2;
 }
 
-.burger-menu__cover {
+.burger-menu-cover {
   display: none;
   position: fixed;
   top: 0;
@@ -24,7 +24,7 @@
   z-index: 1;
 }
 
-.burger-menu__cover_on {
+.burger-menu-cover_on {
   display: block;
   opacity: 60%;
 }

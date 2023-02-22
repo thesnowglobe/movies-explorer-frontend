@@ -10,7 +10,7 @@ const BurgerMenu = () => {
 
   return (
     <>
-    <div className={`${menuOpen ? "burger-menu__cover burger-menu__cover_on" : "burger-menu__cover"}`}/>
+    <div className={`${menuOpen ? "burger-menu-cover burger-menu-cover_on" : "burger-menu-cover"}`}/>
     <div className={`${menuOpen ? "burger-menu_open" : "burger-menu"}`}>
       <button 
         className={`${menuOpen ? "burger-menu__btn-close" : "burger-menu__btn-open"}`} 
