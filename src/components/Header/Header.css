@@ -55,6 +55,10 @@
   .header {
     padding: 18px 30px;
   }
+
+  .header__auth-content {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 321px) {

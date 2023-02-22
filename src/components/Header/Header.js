@@ -7,7 +7,6 @@ import BurgerMenu from "../BurgerMenu/BurgerMenu";
 
 const Header = (props) => {
   const { isLoggedIn = true } = props;
-  const { isBurgerMenu = true } = props;
 
   return (
     <header className="header">
@@ -25,14 +24,13 @@ const Header = (props) => {
             </NavLink>
           </div>
         </>
-      ) : isLoggedIn && !isBurgerMenu ? (
+      ) : (
         <>
           <div className="header__auth-content">
             <Navigation />
           </div>
+          <BurgerMenu />
         </>
-      ): (
-        <BurgerMenu />
       )} 
     </header>
   );
