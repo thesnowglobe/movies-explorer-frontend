@@ -6,14 +6,14 @@ import Navigation from "../Navigation/Navigation";
 import BurgerMenu from "../BurgerMenu/BurgerMenu";
 
 const Header = (props) => {
-  const { isLoggedIn = true } = props;
+  const { loggedIn } = props;
 
   return (
     <header className="header">
       <Link className="header__logo-link" to="/">
         <img className="header__logo" src={logo} alt="green circle" />
       </Link>
-      {!isLoggedIn ? (
+      {!loggedIn ? (
         <>
           <div className="header__content">
             <NavLink className="header__link" to="/signup">

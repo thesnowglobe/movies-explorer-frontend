@@ -52,6 +52,13 @@
   border-bottom: 1px solid #4285F4;
 }
 
+.auth-form__input_invalid {
+  color: #FF004C;
+}
+.auth-form__input_invalid:focus {
+  border-bottom: 1px solid #FF004C;
+}
+
 .auth-form__btn {
   margin: auto 0 0;
   font-size: 14px;
@@ -68,6 +75,13 @@
 
 .auth-form__btn:hover {
   filter: opacity(80%);
+}
+
+.auth-form__btn_disabled {
+  cursor: default;
+  pointer-events: none;
+  background-color: #F8F8F8;
+  color: #C2C2C2;
 }
 
 .auth-form__text {

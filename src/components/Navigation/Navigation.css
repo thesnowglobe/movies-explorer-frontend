@@ -23,13 +23,10 @@
   filter: opacity(70%);
 }
 
-.navigation__account {
-  display: flex;
-  gap: 17px;
-  align-items: center;
-}
-
 .navigation__account-link {
+  display: flex;
+  align-items: center;
+  gap: 17px;
   font-size: 14px;
   font-weight: 500;
   line-height: 16px;
@@ -52,8 +49,4 @@
   border-radius: 4px;
   border: none;
   cursor: pointer;
-}
-
-.navigation__icon:hover {
-  opacity: 0.8;
 }

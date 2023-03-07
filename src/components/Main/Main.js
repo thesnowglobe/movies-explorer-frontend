@@ -9,9 +9,11 @@ import AboutMe from "../AboutMe/AboutMe";
 import Footer from "../Footer/Footer";
 
 const Main = (props) => {
+  const { loggedIn } = props;
+
   return (
     <>
-      <Header />
+      <Header loggedIn={loggedIn} />
 
       <main className="main">
         <Promo />

@@ -47,6 +47,7 @@
   top: 14px;
   opacity: 0;
   transition: opacity .35s ease-in-out;
+  cursor: pointer;
 }
 
 .movies-card:hover .movies-card__btn {
@@ -90,6 +91,7 @@
   width: 21px;
   height: 21px;
   background-color: #313131;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 769px) {

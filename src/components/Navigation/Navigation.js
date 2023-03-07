@@ -18,8 +18,8 @@ const Navigation = () => {
       <div className="navigation__account">
         <NavLink className="navigation__account-link" to="/profile">
             Аккаунт
+            <button className="navigation__icon"/>
         </NavLink>
-        <button className="navigation__icon"/>
       </div>
     </nav>
   );
