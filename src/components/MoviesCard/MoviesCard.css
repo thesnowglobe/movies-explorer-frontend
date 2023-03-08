@@ -12,7 +12,7 @@
   border-radius: 6px;
   cursor: pointer;
   max-width: 360px;
-  max-height: 201px;
+  height: 201px;
   object-fit: cover;
 }
 
