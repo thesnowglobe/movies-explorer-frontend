@@ -48,6 +48,7 @@ const Profile = (props) => {
                 pattern="^[a-zA-Zа-яА-Я\s-]+$"
                 value={values.updateName || ""}
                 onChange={handleChange}
+                required
               />
               <p className="profile__text">
                 {currentUser.name}
@@ -63,6 +64,7 @@ const Profile = (props) => {
                 pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
                 value={values.updateEmail || ""}
                 onChange={handleChange}
+                required
               />
               <p className="profile__text">
                 {currentUser.email}
