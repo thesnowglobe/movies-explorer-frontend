@@ -11,6 +11,8 @@
 .movies-card__image {
   border-radius: 6px;
   cursor: pointer;
+  max-width: 360px;
+  max-height: 201px;
 }
 
 .movies-card__content {
