@@ -196,13 +196,11 @@ const App = () => {
       .then((res) => {
         setSavedMovies(savedMovies.concat(res));
         setSavedMoviesList(savedMoviesList.concat(res));
-         console.log(movie.trailerLink)
       })
       .catch((err) => console.log(`Error: ${err}`));
   };
 
   const handleDeleteMovie = (movie) => {
-    console.log(movie);
     mainApi.deleteMovie(movie._id)
       .then(() => {
         const updatedMoviesList = savedMovies.filter((item) => item._id !== movie._id);
