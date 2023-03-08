@@ -152,7 +152,6 @@ const App = () => {
       setPreloader(true);
       moviesApi.getInitialMovies()
         .then((requestMovies) => {
-          console.log(requestMovies);
           requestMovies = requestMovies.map((item) => {
             if(!REGEX_URL.test(item.trailerLink)) {
               item.trailerLink = 'https://www.youtube.com';
