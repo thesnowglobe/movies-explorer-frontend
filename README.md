@@ -5,4 +5,7 @@ frontend of 'movies-explorer' project
  [link](https://drive.google.com/drive/folders/1xxTePXM1g01hYmV8qS0lR1PtyG-OBsrU?usp=sharing)
 
  ## Link to Frontend (level - 3)
- [link](http://aly0explorerfront.nomoredomains.work)
+ [frontend](http://aly0explorerfront.nomoredomains.work)
+
+ ## Link to Pull Request (level - 3) 
+ [Pull Request](https://github.com/aly0m/movies-explorer-frontend/pull/2)
