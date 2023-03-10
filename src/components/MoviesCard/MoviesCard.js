@@ -19,21 +19,31 @@ const MoviesCard = (props) => {
     if (!isSaved) {
       onSaveMovie(movie);
     } else {
-      onDeleteMovie(movie);
+      onDeleteMovie(isSaved);
     }
   };
 
   const handleDeleteMovie = () => {
+    if (location.pathname === "/movies") {
+      onDeleteMovie(isSaved);
+    } else {
     onDeleteMovie(movie);
+    }
   };
 
   return (
     <li className="movies-card">
-      <img 
-        className="movies-card__image" 
-        src={movie.image.url ? `${BEATFILM_URL}/${movie.image.url}` : movie.image}
-        alt={`Movie: ${movie.nameRU}`} 
-      />
+      <a
+        className="movies-card__wrap-link" href={movie.trailerLink ? movie.trailerLink : ""}
+        target="_blank" 
+        rel="noreferrer"
+      >
+        <img 
+          className="movies-card__image" 
+          src={movie.image.url ? `${BEATFILM_URL}/${movie.image.url}` : movie.image}
+          alt={`Movie: ${movie.nameRU}`} 
+        />
+      </a>
 
       <div className="movies-card__content">
         <h2 className="movies-card__title">
