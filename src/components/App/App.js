@@ -23,7 +23,7 @@ const App = () => {
   const [currentUser, setCurrentUser] = useState({
     name: "",
     email: "",
-    _id: ""
+    _id: "",
   });
 
   const [loggedIn, setLoggedIn] = useState(true);
@@ -47,7 +47,7 @@ const App = () => {
   }, []);
 
   useEffect (() => {
-    if (loggedIn && !currentUser._id === "") {
+    if (loggedIn && currentUser._id !== "") {
       handleGetSavedMovies();
     }
   }, [loggedIn, currentUser]);
