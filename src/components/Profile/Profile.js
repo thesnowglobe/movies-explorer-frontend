@@ -1,5 +1,5 @@
 import "./Profile.css";
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import Header from "../Header/Header";
 import { Link } from "react-router-dom";
 import { useFormWithValidation } from "../../hooks/useFormWithValidation";
@@ -10,16 +10,24 @@ const Profile = (props) => {
 
   const currentUser = useContext(CurrentUserContext);
 
+  const [successMessage, setSuccessMessage] = useState("");
+
   const { values, handleChange, isValid, resetForm } = useFormWithValidation();
+
+  const checkInputNameValue = values.updateName ?? currentUser.name;
+  const checkInputEmailValue = values.updateEmail ?? currentUser.email;
+  const isSameInputValueName = currentUser.name === checkInputNameValue;
+  const isSameInputValueEmail = currentUser.email === checkInputEmailValue;
 
   const handleSubmit = (evt) => {
     evt.preventDefault();
-
+    
     onUpdateUser({
-      name: values.updateName,
-      email: values.updateEmail
-    })
+      name: values.updateName ?? currentUser.name,
+      email: values.updateEmail ?? currentUser.email
+    });
     resetForm();
+    setSuccessMessage("Профиль успешно обновлен");
   };
 
   return (
@@ -46,7 +54,7 @@ const Profile = (props) => {
                 minLength={2}
                 maxLength={30}
                 pattern="^[a-zA-Zа-яА-Я\s-]+$"
-                value={values.updateName || ""}
+                value={checkInputNameValue}
                 onChange={handleChange}
                 required
               />
@@ -62,7 +70,7 @@ const Profile = (props) => {
                 name="updateEmail"
                 id="update-email"
                 pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-                value={values.updateEmail || ""}
+                value={checkInputEmailValue}
                 onChange={handleChange}
                 required
               />
@@ -70,8 +78,9 @@ const Profile = (props) => {
                 {currentUser.email}
               </p>
             </div>
+            <span className="profile__status">{successMessage ?? ""}</span>
             <button
-              className={`profile__btn ${!isValid ? "profile__btn_disabled" : ""}`}
+              className={`profile__btn ${(isSameInputValueName && isSameInputValueEmail) || !isValid ? "profile__btn_disabled" : ""}`}
               type="submit"
             >
               Редактировать
