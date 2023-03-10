@@ -10,7 +10,7 @@ const FilterCheckbox = (props) => {
         <input 
           className="filter-checkbox__box" 
           type="checkbox"
-          value={isChecked || ""}
+          checked={isChecked ?? false}
           onChange={onCheckboxClick}
         />
         <span className="filter-checkbox__tumbler" />
