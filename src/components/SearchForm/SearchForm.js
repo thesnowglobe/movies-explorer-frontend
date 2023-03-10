@@ -19,13 +19,18 @@ const SearchForm = (props) => {
   const location = useLocation();
 
   useEffect(() => {
+    const storedCheckboxStatus = JSON.parse(localStorage.getItem('checkboxStatus'));
+    setIsChecked(storedCheckboxStatus !== null ? storedCheckboxStatus : true);
+  }, []);
+
+  useEffect(() => {
       if (location.pathname === "/movies") {
-          setInputValue(localStorage.getItem('searchWord'));
-          setIsChecked(JSON.parse(localStorage.getItem('checkboxStatus')));
+        setInputValue(localStorage.getItem('searchWord'));
+        setIsChecked(JSON.parse(localStorage.getItem('checkboxStatus')));
       } else if (location.pathname === "/saved-movies") {
-          const checkboxStatus = JSON.parse(localStorage.getItem('checkboxStatusSavedMovies'));
-          setIsChecked(checkboxStatus);
-          onCheckboxClick(checkboxStatus);
+        const checkboxStatus = JSON.parse(localStorage.getItem('checkboxStatusSaved'));
+        setIsChecked(checkboxStatus);
+        onCheckboxClick(checkboxStatus);
       }
   }, [location]);
 
