@@ -108,6 +108,13 @@
   filter: opacity(70%);
 }
 
+.profile__status {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 17.73px;
+  margin: 0 0 25px 0;
+}
+
 @media screen and (max-width: 500px) {
   .profile {
     margin-top: 70px;
