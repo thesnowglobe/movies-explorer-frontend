@@ -1,6 +1,6 @@
 import "./App.css";
 import React, { useEffect, useState } from "react";
-import { Route, Routes, useNavigate } from "react-router-dom";
+import { Route, Routes, Navigate, useNavigate} from "react-router-dom";
 
 import Main from "../Main/Main";
 import Movies from "../Movies/Movies";
@@ -26,7 +26,7 @@ const App = () => {
     _id: ""
   });
 
-  const [loggedIn, setLoggedIn] = useState(false);
+  const [loggedIn, setLoggedIn] = useState(true);
   const [allMovies, setAllMovies] = useState([]);
   const [foundMovies, setFoundMovies] = useState([]);
   const [savedMovies, setSavedMovies] = useState([]);
@@ -158,7 +158,7 @@ const App = () => {
             }
             return item;
           });
-
+          
           const searchMovies = requestMovies.filter((item) =>
             item.nameRU.toLowerCase().includes(movie.toLowerCase()));
 
@@ -210,7 +210,6 @@ const App = () => {
       .catch((err) => console.log(`Error: ${err}`));
   };
 
-
   const handleGetSavedMovies = () => {
     mainApi.getSavedMovies()
       .then((res) => {
@@ -221,11 +220,10 @@ const App = () => {
       .catch((err) => console.log(`Error: ${err}`));
   };
 
-
-  const handleSearchSavedMovies= (req) => {
+  const handleSearchSavedMovies= (movie) => {
     setPreloader(true);
     const searchMovies = savedMovies.filter((item) =>
-      item.nameRU.toLowerCase().includes(req.toLowerCase()));
+      item.nameRU.toLowerCase().includes(movie.toLowerCase()));
 
     if (searchMovies.length === 0) {
       setMessage('По вашему запросу ничего не найдено');
@@ -244,7 +242,6 @@ const App = () => {
     }
   };
 
-
   return (
     <CurrentUserContext.Provider value={currentUser}>
       <Routes>
@@ -257,13 +254,19 @@ const App = () => {
           } 
         />
 
+        <Route path="/signin" element={loggedIn ? <Navigate to="/"/> : <Login onLogin={handleLogin} />} />
+
+        <Route path="/signup" element={loggedIn ? <Navigate to="/"/> : <Register onRegister={handleRegister} />} />
+
+        <Route path="*" element={<NotFound />} />
+        
         <Route
           path="/movies/*" 
           element={
             <ProtectedRoute loggedIn={loggedIn}>
               <Movies 
                 onSearch={handleSearchMovies}
-                savedMovies={savedMovies}
+                savedMovies={savedMoviesList}
                 foundMovies={foundMovies}
                 onSaveMovie={handleSaveMovie}
                 onDeleteMovie={handleDeleteMovie}
@@ -307,11 +310,6 @@ const App = () => {
           } 
         />
 
-        <Route path="/signin" element={<Login onLogin={handleLogin} />} />
-
-        <Route path="/signup" element={<Register onRegister={handleRegister} />} />
-
-        <Route path="*" element={<NotFound />} />
       </Routes>
     </CurrentUserContext.Provider>
   );
