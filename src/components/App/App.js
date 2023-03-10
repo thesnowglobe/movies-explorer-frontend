@@ -47,7 +47,7 @@ const App = () => {
   }, []);
 
   useEffect (() => {
-    if (loggedIn && currentUser) {
+    if (loggedIn && !currentUser._id === "") {
       handleGetSavedMovies();
     }
   }, [loggedIn, currentUser]);
