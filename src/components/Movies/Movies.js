@@ -10,6 +10,7 @@ const Movies = (props) => {
   const {
     onSearch,
     savedMovies,
+    savedMoviesList,
     foundMovies,
     onSaveMovie,
     onDeleteMovie,
@@ -34,6 +35,7 @@ const Movies = (props) => {
         <MoviesCardList 
           foundMovies={foundMovies}
           savedMovies={savedMovies}
+          savedMoviesList={savedMoviesList}
           onSaveMovie={onSaveMovie}
           onDeleteMovie={onDeleteMovie}
           message={message}
