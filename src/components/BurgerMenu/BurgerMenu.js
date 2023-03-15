@@ -1,12 +1,13 @@
 import "./BurgerMenu.css";
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const BurgerMenu = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const handleMenuClick = () => {
     setMenuOpen(!menuOpen);
   }
+  const location = useLocation();
 
   return (
     <>
@@ -19,15 +20,15 @@ const BurgerMenu = () => {
       />
       {menuOpen ? (
         <div className="burger-menu__content">
-          <Link className="burger-menu__link" to="/">
+          <Link className={`burger-menu__link ${location.pathname === "/" ? "burger-menu__link-active" : ""}`} to="/">
             Главная
           </Link>
 
-          <Link className="burger-menu__link burger-menu__link-active" to="/movies">
+          <Link className={`burger-menu__link ${location.pathname === "/movies" ? "burger-menu__link-active" : ""}`} to="/movies">
             Фильмы
           </Link>
 
-          <Link className="burger-menu__link" to="/saved-movies">
+          <Link className={`burger-menu__link ${location.pathname === "/saved-movies" ? "burger-menu__link-active" : ""}`} to="/saved-movies">
             Сохранённые фильмы
           </Link>
           <div className="burger-menu__account">

@@ -2,10 +2,19 @@ import "./AuthForm.css";
 import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../../images/logo.svg";
-import Error from "../Error/Error";
 
 const AuthForm = (props) => {
-  const { formMessage, formName, buttonText, text, linkText, linkPath, children } = props;
+  const { 
+    formMessage,
+    formName,
+    buttonText,
+    text,
+    linkText,
+    linkPath,
+    onSubmit,
+    isValid,
+    children
+  } = props;
 
   return (
     <section className="auth-form">
@@ -17,14 +26,10 @@ const AuthForm = (props) => {
         className="auth-form__form"
         id={`form-${formName}`}
         name={`form-${formName}`}
+        onSubmit={onSubmit}
       >
         {children}
-        <Error
-          className="auth-form__error"
-          errorMessage=""
-          id={`submit-${formName}-error`}
-        />
-        <button className="auth-form__btn">
+        <button className={`auth-form__btn ${!isValid ? "auth-form__btn_disabled" : ""}`}>
           {buttonText}
         </button>
       </form>
