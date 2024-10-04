@@ -10,6 +10,7 @@ export const handleResponse = (res) => {
 export const getInitialMovies = () => {
   return fetch(`${BEATFILM_URL}/beatfilm-movies`, {
     method: 'GET',
+    mode: 'cors',
     headers: {
       'Content-Type': 'application/json',
     },

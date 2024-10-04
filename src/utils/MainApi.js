@@ -10,6 +10,7 @@ export const handleResponse = (res) => {
 export const getUserInfo = () => {
   return fetch(`${BASE_URL}/users/me`, {
     method: 'GET',
+    mode: 'cors',
     headers: {
       'Content-Type': 'application/json',
       'Authorization': 'Bearer ' + localStorage.getItem('jwt')
@@ -21,6 +22,7 @@ export const getUserInfo = () => {
 export const updateUserInfo = ({name, email}) => {
   return fetch(`${BASE_URL}/users/me`, {
     method: 'PATCH',
+    mode: 'cors',
     headers: {
       'Content-Type': 'application/json',
       'Authorization': 'Bearer ' + localStorage.getItem('jwt')
@@ -33,6 +35,7 @@ export const updateUserInfo = ({name, email}) => {
 export const createMovie = (movie) => {
   return fetch(`${BASE_URL}/movies`, {
     method: 'POST',
+    mode: 'cors',
     headers: {
       'Content-Type': 'application/json',
       'Authorization': 'Bearer ' + localStorage.getItem('jwt')
@@ -57,6 +60,7 @@ export const createMovie = (movie) => {
 export const deleteMovie = (id) => {
   return fetch(`${BASE_URL}/movies/${id}`, {
     method: 'DELETE',
+    mode: 'cors',
     headers: {
       'Content-Type': 'application/json',
       'Authorization': 'Bearer ' + localStorage.getItem('jwt')
@@ -68,6 +72,7 @@ export const deleteMovie = (id) => {
 export const getSavedMovies = () => {
   return fetch(`${BASE_URL}/movies`, {
     method: 'GET',
+    mode: 'cors',
     headers: {
       'Content-Type': 'application/json',
       'Authorization': 'Bearer ' + localStorage.getItem('jwt')

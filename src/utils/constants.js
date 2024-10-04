@@ -1,4 +1,4 @@
-export const BASE_URL = "https://aly0-movies-explorer.nomoredomainsclub.ru";
+export const BASE_URL = "https://movies-explorer-api-beige.vercel.app";
 
 export const BEATFILM_URL = "https://api.nomoreparties.co";
 
