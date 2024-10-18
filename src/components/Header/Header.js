@@ -17,10 +17,10 @@ const Header = (props) => {
         <>
           <div className="header__content">
             <NavLink className="header__link" to="/signup">
-              Регистрация
+              Sign Up
             </NavLink>
             <NavLink className="header__link header__link-login" to="/signin">
-              Войти
+              Sign In
             </NavLink>
           </div>
         </>

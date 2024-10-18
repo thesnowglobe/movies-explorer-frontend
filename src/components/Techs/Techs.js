@@ -6,14 +6,14 @@ const Techs = () => {
   return (
     <section className="techs">
       <h2 className="techs__heading" id="techs">
-        Технологии
+        Technologies
       </h2>
       <h3 className="techs__title">
-        7 технологий
+        7 technologies
       </h3>
       <p className="techs__text">
-        На курсе веб-разработки мы освоили технологии, которые применили
-        в дипломном проекте.
+        In the web development course we mastered technologies
+        that we applied in our diploma project.
       </p>
       <ul className="techs__list">
         {techs.map((tech) => (

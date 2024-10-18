@@ -44,7 +44,7 @@ const SearchForm = (props) => {
     if (evt.target.value.length === 0) {
       setSearchError({
         isValid: evt.target.validity.valid,
-        errorMessage: "Нужно ввести ключевое слово"
+        errorMessage: "You need to enter a keyword"
       });
     } else {
       setSearchError({
@@ -60,7 +60,7 @@ const SearchForm = (props) => {
     if (!inputValue) {
       return setSearchError({
         isValid: false,
-        errorMessage: "Нужно ввести ключевое слово"
+        errorMessage: "You need to enter a keyword"
       });
     }
 
@@ -82,7 +82,7 @@ const SearchForm = (props) => {
       >
         <input 
           className="search-form__input" 
-          placeholder="Фильм"
+          placeholder="Movie"
           type="text"
           name="movieSearch"
           id="search-form-input"
@@ -94,7 +94,7 @@ const SearchForm = (props) => {
           className="search-form__btn" 
           type="submit"
         >
-          Поиск
+          Search
         </button>
       </form>
 

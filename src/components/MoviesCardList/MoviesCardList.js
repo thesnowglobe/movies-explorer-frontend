@@ -137,7 +137,7 @@ const MoviesCardList = (props) => {
           type="button"
           onClick={handleAddButtonClick}
         >
-          Ещё
+          More
         </button>
       ) : (
         ""

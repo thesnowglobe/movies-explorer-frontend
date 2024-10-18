@@ -7,19 +7,19 @@ const AboutMe = () => {
   return (
     <section className="about-me">
       <h2 className="about-me__heading" id="student">
-        Студент
+        Student
       </h2>
       <figure className="about-me__figure">
         <figcaption className="about-me__caption">
           <h3 className="about-me__title">
-            Алёна
+            Alena
           </h3>
           <p className="about-me__subtitle">
-            Фронтенд-разработчик, 23 года
+            Frontend developer, 25 y.o.
           </p>
           <p className="about-me__text">
-            Начинающий фронтенд-разработчик который в свободное время рисует,
-            учит иностранные языки и путешествует.
+            An aspiring frontend developer who draws in her spare time,
+            learns foreign languages, and travels.
           </p>
           <a className="about-me__link" href="https://github.com/aly0m" target="_blank" rel="noreferrer">
             Github

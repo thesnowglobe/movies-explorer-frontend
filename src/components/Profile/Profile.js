@@ -27,7 +27,7 @@ const Profile = (props) => {
       email: values.updateEmail ?? currentUser.email
     });
     resetForm();
-    setSuccessMessage("Профиль успешно обновлен");
+    setSuccessMessage("Profile successfully updated");
   };
 
   return (
@@ -38,7 +38,7 @@ const Profile = (props) => {
       <main className="main">
         <section className="profile">
           <h1 className="profile__title">
-            {`Привет, ${currentUser.name}!`}
+            {`Hello, ${currentUser.name}!`}
           </h1>
           <form 
             className="profile__form"
@@ -47,7 +47,7 @@ const Profile = (props) => {
             <div className="profile__input-wrap">
               <input 
                 className={`profile__input ${!isValid ? "profile__input_invalid" : ""}`}
-                placeholder="Имя"
+                placeholder="Name"
                 type="text"
                 name="updateName"
                 id="update-name"
@@ -83,14 +83,14 @@ const Profile = (props) => {
               className={`profile__btn ${(isSameInputValueName && isSameInputValueEmail) || !isValid ? "profile__btn_disabled" : ""}`}
               type="submit"
             >
-              Редактировать
+              Edit
             </button>
             <Link 
               className="profile__link" 
               to="/"
               onClick={onSignOut}
             >
-              Выйти из аккаунта
+              Sign Out
             </Link>
           </form>
         </section>

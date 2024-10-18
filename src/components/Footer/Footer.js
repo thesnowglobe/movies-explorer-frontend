@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <p className="footer__text">
-        Учебный проект Яндекс.Практикум х BeatFilm.
+        Project Yandex.Practicum x BeatFilm.
       </p>
       <div className="footer__container">
         <p className="footer__copyright">
@@ -14,11 +14,11 @@ const Footer = () => {
         <ul className="footer__list">
           <li className="footer__item">
             <a className="footer__link" href="https://practicum.yandex.ru" target="_blank" rel="noreferrer">
-              Яндекс.Практикум
+              Yandex.Practicum
             </a>
           </li>
           <li className="footer__item">
-            <a className="footer__link" href="https://github.com/aly0m" target="_blank" rel="noreferrer">
+            <a className="footer__link" href="https://github.com/thesnowglobe" target="_blank" rel="noreferrer">
               Github
             </a>
           </li>

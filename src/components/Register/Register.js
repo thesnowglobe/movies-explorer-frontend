@@ -23,16 +23,16 @@ const Register = (props) => {
   return (
     <AuthForm
       formName="register"
-      formMessage="Добро пожаловать!"
-      buttonText="Зарегистрироваться"
-      text="Уже зарегистрированы?"
-      linkText="Войти"
+      formMessage="Welcome!"
+      buttonText="Sign up"
+      text="Already registered?"
+      linkText="Sign in"
       linkPath="/signin"
       onSubmit={handleSubmit}
       isValid={isValid}
     >
       <label className="auth-form__label">
-        Имя
+        Name
       </label>
       <input
         className={`auth-form__input ${!isValid ? "auth-form__input_invalid" : ""}`}

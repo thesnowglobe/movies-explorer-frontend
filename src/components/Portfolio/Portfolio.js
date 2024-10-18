@@ -7,7 +7,7 @@ const Portfolio = () => {
   return (
     <div className="portfolio">
       <h3 className="portfolio__title">
-        Портфолио
+        Portfolio
       </h3>
       <ul className="portfolio__links">
         {portfolio.map((item) => (

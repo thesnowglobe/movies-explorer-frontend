@@ -6,7 +6,7 @@ const Promo = () => {
   return (
     <section className="promo">
       <h1 className="promo__title">
-        Учебный проект студента факультета Веб-разработки.
+        Academic project of a student of the Web Development faculty.
       </h1>
       <NavTab />
     </section>

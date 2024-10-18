@@ -15,7 +15,7 @@ const FilterCheckbox = (props) => {
         />
         <span className="filter-checkbox__tumbler" />
       </label>
-      <p className="filter-checkbox__text">Короткометражки</p>
+      <p className="filter-checkbox__text">Short films</p>
     </div>
   );
 };

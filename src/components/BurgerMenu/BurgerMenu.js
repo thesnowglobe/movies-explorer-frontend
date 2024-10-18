@@ -21,19 +21,19 @@ const BurgerMenu = () => {
       {menuOpen ? (
         <div className="burger-menu__content">
           <Link className={`burger-menu__link ${location.pathname === "/" ? "burger-menu__link-active" : ""}`} to="/">
-            Главная
+            Main
           </Link>
 
           <Link className={`burger-menu__link ${location.pathname === "/movies" ? "burger-menu__link-active" : ""}`} to="/movies">
-            Фильмы
+            Movies
           </Link>
 
           <Link className={`burger-menu__link ${location.pathname === "/saved-movies" ? "burger-menu__link-active" : ""}`} to="/saved-movies">
-            Сохранённые фильмы
+            Saved Movies
           </Link>
           <div className="burger-menu__account">
             <Link className="burger-menu__account-link" to="/profile">
-              Аккаунт
+              Profile
             </Link>
             <button className="navigation__icon" type="button" />
           </div>

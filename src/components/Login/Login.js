@@ -28,10 +28,10 @@ const Login = (props) => {
   return (
     <AuthForm
       formName="login"
-      formMessage="Рады видеть!"
-      buttonText="Войти"
-      text="Ещё не зарегистрированы?"
-      linkText="Регистрация"
+      formMessage="Good to see you!"
+      buttonText="Sign in"
+      text="Not registered yet?"
+      linkText="Sign up"
       linkPath="/signup"
       onSubmit={handleSubmit}
       isValid={isValid}
@@ -55,7 +55,7 @@ const Login = (props) => {
         id="login-email-error"
       />
       <label className="auth-form__label">
-        Пароль
+        Password
       </label>
       <input
         className={`auth-form__input ${!isValid ? "auth-form__input_invalid" : ""}`}

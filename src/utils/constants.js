@@ -22,22 +22,22 @@ export const LOAD_RENDER_MIN = 2;
 
 export const getMovieDuration = (duration, movie) => {
   if (duration === 60) {
-      return `1 ч`;
+      return `1 h`;
   }
 
   if (duration === 120) {
-      return `2 ч`;
+      return `2 h`;
   }
 
   if (duration > 120) {
-      return `2 ч ${movie.duration - 120} м`;
+      return `2 h ${movie.duration - 120} min`;
   }
 
   if (duration > 60 && duration < 120) {
-      return `1 ч ${movie.duration - 60} м`;
+      return `1 h ${movie.duration - 60} min`;
   }
 
   if (duration < 60) {
-      return `${movie.duration} м`;
+      return `${movie.duration} min`;
   }
 };

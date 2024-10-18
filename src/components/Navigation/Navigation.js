@@ -7,17 +7,17 @@ const Navigation = () => {
     <nav className="navigation">
       <div className="navigation__movies">
         <Link className="navigation__movies-link" to="/movies">
-            Фильмы
+            Movies
         </Link>
 
         <NavLink className="navigation__movies-link" to="/saved-movies">
-            Сохранённые фильмы
+            Saved Movies
         </NavLink>
       </div>
 
       <div className="navigation__account">
         <NavLink className="navigation__account-link" to="/profile">
-            Аккаунт
+            Profile
             <button className="navigation__icon"/>
         </NavLink>
       </div>

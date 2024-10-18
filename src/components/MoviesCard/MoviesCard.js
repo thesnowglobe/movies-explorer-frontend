@@ -41,13 +41,13 @@ const MoviesCard = (props) => {
         <img 
           className="movies-card__image" 
           src={movie.image.url ? `${BEATFILM_URL}/${movie.image.url}` : movie.image}
-          alt={`Movie: ${movie.nameRU}`} 
+          alt={`Movie: ${movie.nameEN}`} 
         />
       </a>
 
       <div className="movies-card__content">
         <h2 className="movies-card__title">
-          {movie.nameRU}
+          {movie.nameEN}
         </h2>
         <p className="movies-card__duration">
           {getMovieDuration(movie.duration, movie)}
@@ -60,7 +60,7 @@ const MoviesCard = (props) => {
           type="button"
           onClick={handleSaveMovie}
         >
-          {isSaved ? '' : 'Сохранить'}
+          {isSaved ? '' : 'Save'}
         </button>
        :
         <button 

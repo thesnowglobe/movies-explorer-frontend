@@ -137,10 +137,10 @@ const App = () => {
   const handleSearchMovies = (movie, checked) => {
     if (allMovies.length !== 0) {
       const searchMovies = allMovies.filter((item) =>
-        item.nameRU.toLowerCase().includes(movie.toLowerCase()));
+        item.nameEN.toLowerCase().includes(movie.toLowerCase()));
 
       if (searchMovies.length === 0) {
-        setMessage('По вашему запросу ничего не найдено');
+        setMessage('Nothing found matching your request');
       } else {
         localStorage.setItem('searchWord', movie);
         localStorage.setItem('searchedMovies', JSON.stringify(searchMovies));
@@ -160,10 +160,10 @@ const App = () => {
           });
           
           const searchMovies = requestMovies.filter((item) =>
-            item.nameRU.toLowerCase().includes(movie.toLowerCase()));
+            item.nameEN.toLowerCase().includes(movie.toLowerCase()));
 
           if (searchMovies.length === 0) {
-            setMessage('По вашему запросу ничего не найдено');
+            setMessage('Nothing found matching your request');
           } else {
             localStorage.setItem('loadedMovies', JSON.stringify(requestMovies));
             setAllMovies(requestMovies);
@@ -223,10 +223,10 @@ const App = () => {
   const handleSearchSavedMovies= (movie) => {
     setPreloader(true);
     const searchMovies = savedMovies.filter((item) =>
-      item.nameRU.toLowerCase().includes(movie.toLowerCase()));
+      item.nameEN.toLowerCase().includes(movie.toLowerCase()));
 
     if (searchMovies.length === 0) {
-      setMessage('По вашему запросу ничего не найдено');
+      setMessage('Nothing found matching your request');
       setPreloader(false);
     } else {
       setSavedMovies(searchMovies);
