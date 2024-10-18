@@ -30,14 +30,14 @@ export const getMovieDuration = (duration, movie) => {
   }
 
   if (duration > 120) {
-      return `2 h ${movie.duration - 120} min`;
+      return `2 h ${movie.duration - 120} m`;
   }
 
   if (duration > 60 && duration < 120) {
-      return `1 h ${movie.duration - 60} min`;
+      return `1 h ${movie.duration - 60} m`;
   }
 
   if (duration < 60) {
-      return `${movie.duration} min`;
+      return `${movie.duration} m`;
   }
 };
