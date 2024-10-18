@@ -19,7 +19,7 @@ const AboutMe = () => {
           </p>
           <p className="about-me__text">
             An aspiring frontend developer who draws in her spare time,
-            learns foreign languages, and travels.
+            learns foreign languages, and likes to travel.
           </p>
           <a className="about-me__link" href="https://github.com/aly0m" target="_blank" rel="noreferrer">
             Github
